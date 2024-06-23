@@ -1,0 +1,24 @@
+<mat-toolbar class="my-custom-toolbar">
+  <span> Hi_ </span>
+  {{session.lastName}}
+
+<section>
+  <div class="button-row">
+    <button mat-raised-button color="primary" (click)="loadComponent('Message')">הודעות</button>
+    <button mat-raised-button color="primary" (click)="loadComponent('Payment')">תשלומים</button>
+    <button mat-raised-button color="primary" (click)="loadComponent('details')">הצגת כול השכנים</button>
+  </div>
+</section>
+</mat-toolbar>
+
+  <div class="component" *ngIf="currentComponent === 'Message'">
+   <app-add-note></app-add-note>
+  </div>
+
+  <div  class="component"  *ngIf="currentComponent === 'Payment'">
+    <app-payments></app-payments>
+  </div>
+
+  <div  class="component"  *ngIf="currentComponent === 'details'">
+   <app-neighbors></app-neighbors>
+  </div>

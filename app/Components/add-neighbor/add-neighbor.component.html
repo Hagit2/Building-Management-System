@@ -1,0 +1,65 @@
+
+<mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Family Name</ng-template>
+        <mat-form-field>
+          <mat-label>Family Name</mat-label>
+          <input matInput placeholder="Family Name" formControlName="firstCtrl" [(ngModel)]="familyName" (change)="onInputChange($event)">
+        </mat-form-field>
+        <div>
+          <p></p>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Apartment number</ng-template>
+        <mat-form-field>
+          <mat-label>Apartment number</mat-label>
+          <input matInput placeholder="Apartment number" formControlName="secondCtrl"
+          [(ngModel)]="apartmentNumber">
+        </mat-form-field>
+        <div>
+          <!-- <p>Go to a different step to see the error state</p> -->
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Number People</ng-template>
+          <mat-form-field>
+            <mat-label>Number People</mat-label>
+            <input matInput placeholder="Number People" formControlName="secondCtrl" 
+            [(ngModel)]="numPersons" (change)="onInputChange($event)">
+          </mat-form-field>
+          <div>
+            <!-- <p>Go to a different step to see the error state</p> -->
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      
+
+      
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done!</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()" >Reset</button>
+        <button mat-raised-button color="primary" (click)="addNeighbor()">Add Neighbor 
+            <i class="material-icons like-icon" *ngIf="isLiked">favorite</i>
+  <i class="material-icons like-icon" *ngIf="!isLiked">favorite_border</i>
+        </button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+

@@ -1,0 +1,32 @@
+<div class="container">
+    <form>
+        <h2>New Message💜</h2>
+      <div class="input-field">
+        <mat-form-field appearance="fill">
+          <input type="number" matInput placeholder="Enter id Neighbor" #id>
+        </mat-form-field>
+      </div>
+      <div class="input-field">
+        <h3>Enter Start Date:</h3>
+        <mat-form-field appearance="fill">
+            <input type="date" matInput placeholder="Enter Start Date" #dateStart>
+        </mat-form-field>
+      </div>
+      <div class="input-field">
+        <h3>Enter End Date:</h3>
+        <mat-form-field appearance="fill">
+          <input type="date" matInput placeholder="Enter Date End" #dateEnd>
+        </mat-form-field>
+      </div>
+      <div class="input-field">
+        <mat-form-field>
+            <mat-label>Enter Message</mat-label>
+            <textarea matInput #txt></textarea>
+          </mat-form-field>
+      </div>
+  
+      <button mat-raised-button color="primary" (click)="openSnackBar(id.value, dateStart.value,dateEnd.value,txt.value)">Submit</button>
+    </form>
+  </div>
+  
+  

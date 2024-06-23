@@ -1,0 +1,41 @@
+.mat-mdc-table {
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+  }
+  
+  .mat-column-name {
+    height: 100px;
+  }
+
+  .green-icon {
+    color: rgb(36, 209, 36);
+  }
+  
+  .red-icon {
+    color: grey;
+  }
+
+  .button {
+    position: fixed; /* הכפתור יישאר בתחתית העמוד */
+    left:0;
+    bottom: 20px; /* מרחק מהתחתית ב-20 פיקסלים */
+    width: 7%; /* כדי שהכפתור יהיה ברוחב מלא של העמוד */
+    height: 50px; /* גובה הכפתור */
+    background-color: rgb(74, 28, 105); /* צבע רקע */
+    color: white; /* צבע טקסט */
+    border: none; /* ללא גבול */
+    border-radius: 8px; /* פינות מעוגלות */
+    font-size: 16px; /* גודל טקסט */
+    cursor: pointer; /* סמן של ידית */
+  /* padding-left: 0.5cm; */
+}
+
+
+.dontSeeButton{
+    background-color: transparent; /* מגדיר את רקע הכפתור כשקוף */
+    border: none; /* מסיר את הגבולות */
+    padding: 0; /* מסיר ריפוד */
+    cursor: pointer; /* מציין שהכפתור הוא כפתור ניתן ללחיצה */
+
+}

@@ -1,0 +1,48 @@
+<!-- <div class="add-payment">
+    <h2>הוספת תשלום חדש</h2>
+    <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="amount">סכום:</label>
+        <input type="number" id="amount" formControlName="amount">
+      </div>
+      <div>
+        <label for="date">תאריך:</label>
+        <input type="date" id="date" formControlName="date">
+      </div>
+      <button type="submit">הוסף</button>
+    </form>
+  </div> -->
+
+  <!-- <mat-form-field>
+    <mat-label>Message</mat-label>
+    <input matInput value="Disco party!" #message>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Action</mat-label>
+    <input matInput value="Dance" #action>
+  </mat-form-field>
+  
+  <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button> -->
+
+
+  <div class="container">
+    <form>
+        <h2>New Payment💜</h2>
+      <div class="input-field">
+        <mat-form-field appearance="fill">
+          <input type="number" matInput placeholder="Enter Amount" #amount>
+        </mat-form-field>
+      </div>
+  
+      <div class="input-field">
+        <mat-form-field appearance="fill">
+          <input type="date" matInput placeholder="Enter Date" #date>
+        </mat-form-field>
+      </div>
+  
+      <button mat-raised-button color="primary" (click)="openSnackBar(amount.value, date.value)">Submit</button>
+    </form>
+  </div>
+  
+  

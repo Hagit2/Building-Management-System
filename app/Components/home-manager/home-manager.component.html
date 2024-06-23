@@ -1,0 +1,37 @@
+<mat-toolbar class="my-custom-toolbar">
+    <span> Hi </span>
+      _Managger
+  
+  <section>
+    <div class="button-row">
+      <button mat-raised-button color="primary" (click)="loadComponent('Tasks')">משימות</button>
+      <button mat-raised-button color="primary" (click)="loadComponent('Payment')">תשלומים</button>
+    
+      <button mat-raised-button color="primary" (click)="loadComponent('Messege')">הודעות</button>
+      <button mat-raised-button color="primary" (click)="loadComponent('Neighbors')">שכנים</button>
+     
+
+    </div>
+  </section>
+  </mat-toolbar>
+  
+    <div class="component" *ngIf="currentComponent === 'Tasks'">
+   <app-tasks></app-tasks> 
+    </div>
+  
+    <div  class="component"  *ngIf="currentComponent === 'Payment'">
+     <app-payments-manager></app-payments-manager>
+    </div>
+  
+    <div  class="component" *ngIf="currentComponent === 'Messege'">
+      <app-notes></app-notes>
+    </div>
+    
+    <div  class="component" *ngIf="currentComponent === 'Messege'">
+      <app-notes></app-notes>
+    </div>
+    
+
+    <div class="component" *ngIf="currentComponent === 'Neighbors'">
+      <app-neighbors></app-neighbors>
+    </div>

@@ -1,0 +1,47 @@
+.bady-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* רווח בין המרובעים */
+}
+
+/* סגנון עבור כל מרובע */
+.example-card {
+  height: 300px; /* גובה המרובע */
+    height: 300px; /* גובה המרובע */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;  */
+    background-color: rgb(166, 209, 210);
+  
+  justify-content: space-between; /* מרכז את הטקסט אני*/
+  align-items: center;
+}
+
+/* סגנון עבור תוכן הכרטיס */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* מרכז את הטקסט אני*/
+  align-items: center;
+
+}
+
+.mat-icon {
+  vertical-align: middle; /* יישור הטקסט והאייקון במרכז */
+}
+
+.read-icon {
+  cursor: pointer; /* הפיכת העכבר לסמן של יד */
+}
+
+.read {
+  color: red; /* שינוי הצבע לירוק */
+  /* transform: rotate(45deg); */
+}
+
+.notice-board {
+  background-color: burlywood; /* צבע רקע של לוח המודעות */
+  padding: 20px; /* מרווח פנימי לוח מודעות */
+  
+  justify-content: center; /* מיקוד סביב הקומפוננטה */
+}

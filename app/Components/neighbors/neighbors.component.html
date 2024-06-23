@@ -1,0 +1,38 @@
+<div class="container">
+    <form>
+  <mat-table [dataSource]="neighbors" class="mat-elevation-z8">
+      <!-- Family Column -->
+      <ng-container matColumnDef="Family">
+        <mat-header-cell *matHeaderCellDef> Family </mat-header-cell>
+        <mat-cell *matCellDef="let neighbor"> {{neighbor.lastName}} </mat-cell>
+      </ng-container>
+    
+      <!--  number of people Column -->
+      <ng-container matColumnDef="numPersons">
+        <mat-header-cell *matHeaderCellDef> Number Of People </mat-header-cell>
+        <mat-cell *matCellDef="let neighbor"> {{neighbor.numPersons}} </mat-cell>
+      </ng-container>
+      <!-- apartmentNum Column -->
+      <ng-container matColumnDef="apartmentNum">
+        <mat-header-cell *matHeaderCellDef> Apartment number </mat-header-cell>
+        <mat-cell *matCellDef="let neighbor"> {{neighbor.apartmentNum | number}}
+          <button *ngIf="admin" mat-icon-button aria-label="Change Neighbor Details" (click)="ToChange(neighbor)">
+            <mat-icon>edit</mat-icon>  </button>
+       </mat-cell>
+      </ng-container>
+   
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let payment; columns: displayedColumns;"></mat-row>
+      
+  </mat-table>
+  <div  *ngIf="admin">
+    <button class="button" (click)="addNeighbor()">➕</button>
+  </div>
+  <div  *ngIf="!admin">
+    <button class="button" (click)="ToChange()">Update my details</button>
+  </div>
+
+ 
+  </form>
+  </div>
+  

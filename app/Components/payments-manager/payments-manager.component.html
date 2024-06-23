@@ -1,0 +1,39 @@
+<!-- <div style="display: flex; flex-direction: column; align-items: flex-end;"> -->
+  <!-- <button routerLink="/addPayment" class="add-button">Add Payment😉</button> -->
+
+  
+<mat-table [dataSource]="payments" class="mat-elevation-z8">
+    <!-- Neighbors Column -->
+    <ng-container matColumnDef="neighbors">
+      <mat-header-cell *matHeaderCellDef> Neighbors </mat-header-cell>
+      <mat-cell *matCellDef="let payment"> {{payment.neighbors}} </mat-cell>
+    </ng-container>
+  
+    <!-- Is Payment Column -->
+    <ng-container matColumnDef="isPayment">
+      <mat-header-cell *matHeaderCellDef> Is Payment </mat-header-cell>
+      <mat-cell *matCellDef="let payment"> <mat-icon [ngClass]="{'green-icon': payment.isPayment, 'red-icon': !payment.isPayment}">done</mat-icon> </mat-cell>
+      <!-- <mat-cell *matCellDef="let payment"> {{payment.isPayment}} </mat-cell> -->
+    </ng-container>
+  
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+      <mat-cell *matCellDef="let payment"> {{payment.date | date}} </mat-cell>
+    </ng-container>
+    <!-- Cost Column -->
+    <ng-container matColumnDef="cost">
+      <mat-header-cell *matHeaderCellDef> Cost </mat-header-cell>
+      <mat-cell *matCellDef="let payment"> {{payment.cost | currency}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let payment; columns: displayedColumns;"></mat-row>
+   
+</mat-table>
+ <section>
+      <div class="button">
+        <button mat-raised-button color="primary" (click)="addDebt()">הוסף דרישה לתשלום עבור כלל השכנים➕</button>
+      </div>
+    </section>
+<!-- <app-add-debt></app-add-debt> -->

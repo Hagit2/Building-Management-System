@@ -1,0 +1,28 @@
+<div class="container">
+    <form>
+        <!-- <h1>tasks</h1> -->
+  <mat-table [dataSource]="tasks" class="mat-elevation-z8">
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+        <mat-cell *matCellDef="let task"> {{task.description}} </mat-cell>
+      </ng-container>
+    
+      <!-- Is Completed Column -->
+      <ng-container matColumnDef="isCompleted">
+        <mat-header-cell *matHeaderCellDef> Is Completed </mat-header-cell>
+        <mat-cell *matCellDef="let task"> <button class="dontSeeButton" (click)="updateTask()"><mat-icon [ngClass]="{'green-icon': task.isCompleted, 'red-icon': !task.isCompleted}">done</mat-icon></button> </mat-cell>
+      </ng-container>
+      <!-- Cost Column -->
+      <ng-container matColumnDef="cost">
+        <mat-header-cell *matHeaderCellDef> Cost </mat-header-cell>
+        <mat-cell *matCellDef="let task"> {{task.cost | currency}} </mat-cell>
+      </ng-container>
+    
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let payment; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <button class="button" (click)="addTask()">➕</button>
+  </form>
+  </div>
+  

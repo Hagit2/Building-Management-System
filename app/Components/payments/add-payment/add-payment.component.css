@@ -1,0 +1,39 @@
+payment-form.component.css
+.payment-details {
+    margin: 20px;
+  }
+  
+  .payment-date,
+  .payment-amount {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .payment-date label,
+  .payment-amount label {
+    margin-right: 10px;
+  }
+  
+  .payment-date input,
+  .payment-amount input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button-spacer {
+    flex:   auto; /* Creates flexible space between buttons */
+  }
+  
+  h3{
+    color: beige;
+  align-items: 25px;
+  }
+  

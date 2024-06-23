@@ -1,0 +1,36 @@
+
+<!-- <div id="container"> -->
+<!-- <notes></notes> -->
+<!-- <table *ngIf ="!!messages && messages.length ">
+<tr *ngFor = "let message of messages">
+    <td >
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>     {{ message.text }} </mat-card-title>
+          <mat-divider></mat-divider> -->
+          <!-- <mat-card-subtitle>public</mat-card-subtitle> -->
+        <!-- </mat-card-header>
+      </mat-card>
+   
+    </td> -->
+    <!-- <td >
+      {{ message.End | date: 'shpaymentort' }}
+    </td> -->
+<!-- </tr>
+
+</table> -->
+
+
+
+ <app-notes></app-notes>
+
+<button class="button" (click)="enter()">לכניסת דירים</button> 
+<!-- <button class="button" (click)="shwo()">:רשימת שכנים</button>  -->
+<div  *ngIf="neighbor">
+ <app-neighbors></app-neighbors>
+</div>
+
+<!-- </div> -->
+

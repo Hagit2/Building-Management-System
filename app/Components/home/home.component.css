@@ -1,0 +1,33 @@
+.table {
+    
+   
+    display: flex;
+    margin: 1%;
+
+    }
+    td{
+        display: flex;
+
+
+
+        flex-wrap: wrap
+    }
+    .example-card {
+        max-width: 400px;
+      }
+  
+      .button {
+        position: fixed; /* הכפתור יישאר בתחתית העמוד */
+        left:0;
+        bottom: 20px; /* מרחק מהתחתית ב-20 פיקסלים */
+        width: 7%; /* כדי שהכפתור יהיה ברוחב מלא של העמוד */
+        height: 50px; /* גובה הכפתור */
+        background-color: rgb(74, 28, 105); /* צבע רקע */
+        color: white; /* צבע טקסט */
+        border: none; /* ללא גבול */
+        border-radius: 8px; /* פינות מעוגלות */
+        font-size: 16px; /* גודל טקסט */
+        cursor: pointer; /* סמן של ידית */
+      /* padding-left: 0.5cm; */
+    }
+    
