@@ -40,10 +40,15 @@
 
 
 צפיה בכל התשלומים הקימים:
+![image (85)](https://github.com/Hagit2/Building-Management-System/assets/147550225/60f70c1c-4a23-4f97-a9b2-5fb96ef0b6f9)
+
 
 
 
 הוספת תשלום לכל השכנים - [כאשר מוסיפים תשלום הוא נכנס כחוב לשכן וברגע שהשכן משלם הקופה מתעדכנת בסכום שנכנס]:
+![image (86)](https://github.com/Hagit2/Building-Management-System/assets/147550225/71f16adf-c7d1-42b2-8aa6-1a2793fc1099)
+
+
 
 
 
@@ -81,7 +86,7 @@
 
 
 
-תשלום חוב:
+תשלום חוב- [קיימת אפשרות לשלם את כל החוב הנצבר בפעם אחת]:
 ![image (69)](https://github.com/Hagit2/Building_Management_System/assets/147550225/ce876003-05c6-4d46-9799-de90b6f8b1d3)
 
 
